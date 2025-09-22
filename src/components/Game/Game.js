@@ -44,7 +44,9 @@ function Game() {
         isDisabled={gameState() !== "playing"}
       />
       {gameState() === "won" && <p style={{ color: "green" }}>You won!</p>}
-      {gameState() === "lost" && <p style={{ color: "red" }}>You lost!</p>}
+      {gameState() === "lost" && (
+        <p style={{ color: "red" }}>You lost! THe correct answer is {answer}</p>
+      )}
     </>
   );
 }
